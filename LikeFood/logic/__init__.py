@@ -5,8 +5,8 @@ from flask_login import LoginManager
 from flask_marshmallow import Marshmallow
 
 
-app = Flask(__name__, template_folder='render_template', static_folder='styles')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:postgres@localhost/LikeFood'
+app = Flask(__name__, template_folder='render_template', static_folder="static")
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:admin@localhost/LikeFood'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 SECRET_KEY = 'secret!'
 app.config.from_object(__name__)
